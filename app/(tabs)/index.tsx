@@ -17,7 +17,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">GymApp by Stefan & Kevin {'\n'}</ThemedText>
+        <ThemedText type="title">GymApp by S&V Solutions{'\n'}</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
