@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Image, Platform } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -30,17 +30,26 @@ export default function TabLayout() {
         name="training"
         options={{
           title: 'button1',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require('@/assets/images/LogoWeiß.png')}
+              style={{ width: size, height: size, tintColor: color }}
+              resizeMode="contain"
+            />
+          ),
         }}
       />
-       <Tabs.Screen
+
+
+      <Tabs.Screen
         name="ernaehrung"
         options={{
           title: 'button2',
           tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
         }}
       />
-       <Tabs.Screen
+
+      <Tabs.Screen
         name="fortschritt"
         options={{
           title: 'button3',
