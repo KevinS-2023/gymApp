@@ -6,6 +6,9 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 import Logo from '../../assets/images/dumbbell.svg';
+import LogoTwo from '../../assets/images/Food_and_Drink.svg';
+import LogoThree from '../../assets/images/increase.svg';
+import LogoFour from '../../assets/images/profile.svg';
 
 
 export default function TabLayout() {
@@ -42,7 +45,7 @@ export default function TabLayout() {
         options={{
           title: 'Ernährung',
           tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Logo width={size} height={size} fill={color} />
+            <LogoTwo width={size} height={size} fill={color} />
           ),
         }}
       />
@@ -52,7 +55,7 @@ export default function TabLayout() {
         options={{
           title: 'Fortschritt',
           tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Logo width={size} height={size} fill={color} />
+            <LogoThree width={size} height={size} fill={color} />
           ),
         }}
       />
@@ -61,7 +64,7 @@ export default function TabLayout() {
         options={{
           title: 'Profil',
           tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Logo width={size} height={size} fill={color} />
+            <LogoFour width={size} height={size} fill={color} />
           ),
         }}
       />

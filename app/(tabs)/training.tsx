@@ -10,7 +10,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('../../assets/images/calendar_month.svg')}
+          source={require('../../assets/images/SV_Software_Solutions_logo.png')}
           style={styles.reactLogo}
         />
       }>
