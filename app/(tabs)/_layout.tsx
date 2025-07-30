@@ -5,7 +5,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
-import Logo from '../../assets/images/exercise.svg';
+import Logo from '../../assets/images/dumbbell.svg';
 
 
 export default function TabLayout() {
