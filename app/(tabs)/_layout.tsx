@@ -1,16 +1,16 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Image, Platform } from 'react-native';
-
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Tabs } from 'expo-router';
+import React from 'react';
+import { Platform } from 'react-native';
+import Logo from '../../assets/images/exercise.svg';
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  
+
   return (
     <Tabs
       screenOptions={{
@@ -29,13 +29,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="training"
         options={{
-          title: 'button1',
-          tabBarIcon: ({ color, size }) => (
-            <Image
-              source={require('@/assets/images/LogoWeiß.png')}
-              style={{ width: size, height: size, tintColor: color }}
-              resizeMode="contain"
-            />
+          title: 'Training',
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Logo width={size} height={size} fill={color} />
           ),
         }}
       />
@@ -44,23 +40,29 @@ export default function TabLayout() {
       <Tabs.Screen
         name="ernaehrung"
         options={{
-          title: 'button2',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
+          title: 'Ernährung',
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Logo width={size} height={size} fill={color} />
+          ),
         }}
       />
 
       <Tabs.Screen
         name="fortschritt"
         options={{
-          title: 'button3',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
+          title: 'Fortschritt',
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Logo width={size} height={size} fill={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="profil"
         options={{
-          title: 'button4',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="paperplane.fill" color={color} />,
+          title: 'Profil',
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Logo width={size} height={size} fill={color} />
+          ),
         }}
       />
     </Tabs>
